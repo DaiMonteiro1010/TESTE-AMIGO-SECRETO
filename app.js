@@ -34,3 +34,21 @@ function atualizarLista() {
         let itemLista = document.createElement("li");
         itemLista.innerHTML = listaDeAmigos[i];
         listaAtualizada.appendChild(itemLista);
+        
+//sortear amigo e não sortear seu próprio nome
+function sortearAmigo() {
+    if (listaDeAmigos.length == 0) {
+        alert("Por favor, insira um nome válido");
+        return;
+
+    }
+    let indiceAleatorio = Math.floor(Math.random() * listaDeAmigos.length);
+    let nomeSorteado = listaDeAmigos[indiceAleatorio];
+    if (nomeSorteado == nome) {
+        alert("Você não pode ser seu próprio amigo secreto! Tente novamente");
+        return;
+    }
+
+    document.getElementById("resultado").innerHTML = `Seu amigo secreto é: ${nomeSorteado}`;
+
+}  
