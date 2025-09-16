@@ -34,7 +34,7 @@ function atualizarLista() {
         let itemLista = document.createElement("li");
         itemLista.innerHTML = listaDeAmigos[i];
         listaAtualizada.appendChild(itemLista);
-        
+
 //sortear amigo e não sortear seu próprio nome
 function sortearAmigo() {
     if (listaDeAmigos.length == 0) {
@@ -52,3 +52,8 @@ function sortearAmigo() {
     document.getElementById("resultado").innerHTML = `Seu amigo secreto é: ${nomeSorteado}`;
 
 }  
+function reiniciarSorteio() {
+    listaDeAmigos = [];
+    document.getElementById("resultado").innerHTML = "";
+    atualizarLista();
+}
