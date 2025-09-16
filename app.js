@@ -15,3 +15,14 @@ function salvarNome() {
 //lista de amigos vazia
 let listaDeAmigos = [];
 
+//adicionar amigo na lista
+function adicionarAmigo() {
+    let nomeAmigo = document.getElementById("amigo").value;
+    if (nomeAmigo == "") {
+        alert("Por favor, insira um nome válido");
+    } else {
+        listaDeAmigos.push(nomeAmigo);
+        document.getElementById("amigo").value ="";
+        atualizarLista();
+    }
+}
