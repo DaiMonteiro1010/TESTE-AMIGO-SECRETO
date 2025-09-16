@@ -12,3 +12,6 @@ function salvarNome() {
         atualizarLista();
     }
 }
+//lista de amigos vazia
+let listaDeAmigos = [];
+
